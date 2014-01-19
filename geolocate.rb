@@ -9,7 +9,7 @@ loc = gets.chomp
 loc.strip
 loc.gsub!(" ","+")
 
-#send request to google maps geoencode service and parse JSON response
+#send request to google api and parse JSON response
 data = open("http://maps.googleapis.com/maps/api/geocode/json?address="+loc+"&sensor=false").read
 data = JSON.parse(data)
 

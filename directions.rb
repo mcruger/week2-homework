@@ -1,6 +1,6 @@
 require 'open-uri'
 require 'json'
-require 'pp'
+#require 'pp'
 
 #prompt user for starting location
 puts "Enter an origin address:"
@@ -25,4 +25,4 @@ data = JSON.parse(data)
 
 #output distance and duration
 puts "Total driving time: " + data['routes'][0]['legs'][0]["duration"]["text"].to_s
-puts "Total distance traveled " + data['routes'][0]['legs'][0]["distance"]["text"].to_s
+puts "Total distance traveled: " + data['routes'][0]['legs'][0]["distance"]["text"].to_s
